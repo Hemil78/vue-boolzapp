@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    padding: 20px 0;
+    background:  linear-gradient(to bottom, #009688 20%, #dbdbd2 20%);
+}
+
+img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.padding-text{
+    padding: 5px;
+}
+.container{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    border: 1px solid red;
+}
+
+.column-left,
+.column-right{
+    height: 100%;
+    border: 1px solid #000;
+}
+
+.column-left{
+    width: 35%;
+}
+
+.column-right{
+    width: 65%;
+}
+
+.nome-utente,
+.contatto{
+    border: 1px solid rgb(3, 206, 47);
+    background-color: #eaeaea;
+}
