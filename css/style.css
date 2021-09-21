@@ -52,6 +52,7 @@ img{
     align-items: center;
     background-color: #eaeaea;
     padding: 8px;
+    border-right: 1px solid #c5c4c4;
 }
 .icons-font i{
     margin-right: 15px;
