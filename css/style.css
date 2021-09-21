@@ -10,7 +10,7 @@ body{
     height: 100vh;
     font-family: 'Lato', sans-serif;
     padding: 20px 0;
-    background:  linear-gradient(to bottom, #009688 20%, #dcdbd1 20%);
+    background:  linear-gradient(to bottom, #009688 15%, #dcdbd1 15%);
 }
 
 /* CONTAINER */
@@ -51,7 +51,7 @@ img{
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
-    padding: 3px;
+    padding: 8px;
 }
 .icons-font i{
     margin-right: 15px;
@@ -148,7 +148,19 @@ img{
     vertical-align: middle;
     margin-right: 20px;
 }
-
+/* COLUMN RIGHT */
+/* LAST ACCESS */
+.box-contact-me{
+    display: flex;
+}
+.profile-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.access-time{
+    font-size: 11px;
+}
 /* MAIN */
 .main-message{
     flex-grow: 1;
