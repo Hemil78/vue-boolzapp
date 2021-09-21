@@ -43,6 +43,8 @@ img{
     width: 65%;
 }
 
+/* COLUMN LEFT */
+/* NOME UTENTE */
 .nome-utente,
 .contatto{
     display: flex;
@@ -67,6 +69,7 @@ img{
     margin-left: 10px;
 }
 
+/* NOTIFICHE */
 .notifiche{
     display: flex;
     padding: 
@@ -76,9 +79,9 @@ img{
 
 .bell-icon{
     text-align: center;
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
+    line-height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     background-color: #fff;
     margin-right: 10px;
@@ -96,7 +99,15 @@ img{
 }
 .text-message a{
     font-size: 12px;
+    color:rgb(121, 121, 121);
 }
+
+.text-message span{
+    font-size: 14px;
+}
+
+/* SEARCH */
+
 .search{
     padding: 5px;
     background-color: #f0eeee;
@@ -116,6 +127,8 @@ img{
     border: none;
 }
 
+/* CONTACT */
+
 .box-contact{
     flex-grow: 1;
     background-color: #fff;
@@ -123,10 +136,11 @@ img{
 }
 
 .active{
-    background-color: #c7c7c7;
+    background-color: #f0f1f1;
 }
 .contact{
     padding: 8px 10px;
+    border-bottom: 1px solid #e9ebeb;
 }
 
 .box-contact img{
@@ -134,23 +148,90 @@ img{
     vertical-align: middle;
     margin-right: 20px;
 }
-/* SCROOLBAR */
-.box-contact::-webkit-scrollbar {
-    width: 12px;               
-}
-
-.box-contact::-webkit-scrollbar-track {
-    background: #f1f1f1;
-
-}
-
-.box-contact::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 6px rgb(163, 163, 163);    
-    border-radius: 20px;         
-}
 
 /* MAIN */
 .main-message{
     flex-grow: 1;
-    border: 1px solid green;
+    background-image: url(../img/mine.jpg);
+    width: 100%;
+    padding: 60px 30px 0 30px;
+    overflow-y: scroll;
+}
+
+.main-message span{
+    font-size: 11px;
+    bottom: 3px;
+    right: 3px;
+}
+
+.box-message-left,
+.box-message-right{
+    display: flex;
+    width: 100%;
+}
+.box-message-right{
+    justify-content: flex-end;
+}
+
+.message-left,
+.message-right{
+    position: relative;
+    width: 45%;
+    margin-top: 8px;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.message-left{
+    background-color: #fff;
+}
+
+.message-right{
+    background-color: #d5f9ba;
+}
+
+.time{
+    position: absolute;
+    color: #c8caca;
+}
+
+/* write message */
+
+.footer-message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f3eeea;
+    padding: 5px 35px;
+}
+
+.footer-message i{
+    font-size: 20px;
+    color: #999999;
+}
+
+.footer-message input{
+    width: 85%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* SCROOLBAR */
+.box-contact::-webkit-scrollbar,
+.main-message::-webkit-scrollbar {
+    width: 12px;               
+}
+
+.box-contact::-webkit-scrollbar-track,
+.main-message::-webkit-scrollbar-track {
+    background: #f1f1f1;
+
+}
+
+.box-contact::-webkit-scrollbar-thumb,
+.main-message::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgb(163, 163, 163);    
+    border-radius: 20px;         
 }
