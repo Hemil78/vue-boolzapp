@@ -1,3 +1,5 @@
+/* RESET */
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,29 +10,29 @@ body{
     height: 100vh;
     font-family: 'Lato', sans-serif;
     padding: 20px 0;
-    background:  linear-gradient(to bottom, #009688 20%, #dbdbd2 20%);
+    background:  linear-gradient(to bottom, #009688 20%, #dcdbd1 20%);
 }
 
+/* CONTAINER */
+
 img{
-    width: 50px;
+    width: 45px;
     border-radius: 50%;
 }
 
-.padding-text{
-    padding: 5px;
-}
+
 .container{
     display: flex;
     width: 80%;
     height: 100%;
     margin: auto;
-    border: 1px solid red;
 }
 
 .column-left,
 .column-right{
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    border: 1px solid #000;
 }
 
 .column-left{
@@ -43,6 +45,112 @@ img{
 
 .nome-utente,
 .contatto{
-    border: 1px solid rgb(3, 206, 47);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #eaeaea;
+    padding: 3px;
+}
+.icons-font i{
+    margin-right: 15px;
+    font-size: 18px;
+    color: #b1b1b1;
+}
+
+.nome-utente img,
+.contatto img{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.contatto small{
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+.notifiche{
+    display: flex;
+    padding: 
+    8px 10px;
+    background-color: #76c3e7;
+}
+
+.bell-icon{
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+}
+
+.bell-icon i{
+    font-size: 20px;
+    color: #76c3e7;
+}
+
+.text-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.text-message a{
+    font-size: 12px;
+}
+.search{
+    padding: 5px;
+    background-color: #f0eeee;
+}
+.box-search{
+    background-color: #fff;
+    padding: 5px 20px;
+}
+
+.box-search i{
+    color: #b1b1b1;
+    vertical-align: middle;
+}
+.box-search input{
+    width: 80%;
+    margin-left: 20px;
+    border: none;
+}
+
+.box-contact{
+    flex-grow: 1;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+
+.active{
+    background-color: #c7c7c7;
+}
+.contact{
+    padding: 8px 10px;
+}
+
+.box-contact img{
+    width: 55px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+/* SCROOLBAR */
+.box-contact::-webkit-scrollbar {
+    width: 12px;               
+}
+
+.box-contact::-webkit-scrollbar-track {
+    background: #f1f1f1;
+
+}
+
+.box-contact::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgb(163, 163, 163);    
+    border-radius: 20px;         
+}
+
+/* MAIN */
+.main-message{
+    flex-grow: 1;
+    border: 1px solid green;
 }
