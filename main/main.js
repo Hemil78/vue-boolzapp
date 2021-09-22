@@ -85,6 +85,74 @@ const app = new Vue({
                     }
                 ],
             },
+            {
+                name: 'Tony',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Margherita',
+                avatar: '_6',
+                visible: true,
+                messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Pino',
+                avatar: '_7',
+                visible: true,
+                messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Ugo',
+                avatar: '_8',
+                visible: true,
+                messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che ha aperto una nuova pizzeria?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'Si, ma preferirei andare al cinema',
+                        status: 'received'
+                    }
+                ],
+            },
         ]
         
     },
@@ -92,4 +160,5 @@ const app = new Vue({
         
         
     }
+    
 });

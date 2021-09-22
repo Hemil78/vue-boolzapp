@@ -17,7 +17,9 @@
     </head>
 
     <body>
-        <div class="container">
+        
+
+        <div id="root" class="container">
             <!-- COLUMN LEFT -->
             <div class="column-left">
 
@@ -51,26 +53,19 @@
                     </div>
                 </div>
 
-                <div class="box-contact">
+                <ul class="box-contact">
+                    <!-- v-for per ciclare ogni contatto ed inserirlo dinamicamente -->
+                    <li class="contact" v-for="(contact, index) in contacts" :key="index">
+                        <div class="contact-profile">
+                            <!-- concateniamo il valore di ogni avatar con l'img statica -->
+                            <img :src=" `img/avatar${contact.avatar}.jpg` " :alt="contact.name">
+                            <span><strong>{{contact.name}}</strong></span>
+                        </div>
+                    </li>
 
-                    <div class="contact active">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <span><strong>Michele</strong></span>
-                    </div>
-                    <div class="contact">
-                        <img src="img/avatar_2.jpg" alt="">
-                        <span><strong>Fabio</strong></span>
-                    </div>
-                    <div class="contact">
-                        <img src="img/avatar_3.jpg" alt="">
-                        <span><strong>Samuele</strong></span>
-                    </div>
-                    <div class="contact">
-                        <img src="img/avatar_4.jpg" alt="">
-                        <span><strong>Luisa</strong></span>
-                    </div>
+                </ul>
+                        
 
-                </div>
                 
 
             </div>
@@ -138,10 +133,13 @@
             </div>
 
         </div>
+
+        
         
                         
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="main/main.js"></script>
+
     </body>
 </html>
