@@ -55,7 +55,7 @@
 
                 <ul class="box-contact">
                     <!-- v-for per ciclare ogni contatto ed inserirlo dinamicamente -->
-                    <li class="contact" v-for="(contact, index) in contacts" :key="index">
+                    <li class="contact" v-for="(contact, index) in contacts" :key="index" :class="index == 0 ? 'active' : null">
                         <div class="contact-profile">
                             <!-- concateniamo il valore di ogni avatar con l'img statica -->
                             <img :src=" `img/avatar${contact.avatar}.jpg` " :alt="contact.name">
@@ -94,7 +94,7 @@
                 <div class="main-message">
 
                     <div class="box-message-right">
-                        <div class="message-right">
+                        <div class="message-received">
                             
                                 <p>Hai portato a spasso il cane?</p>
                                 <span class="time"><small>10/01/2020 15:30:55</small></span>
@@ -103,7 +103,7 @@
                     </div>
 
                     <div class="box-message-right">
-                        <div class="message-right">
+                        <div class="message-received">
                             
                                 <p>Hai portato a spasso il cane?</p>
                                 <span class="time"><small>10/01/2020 15:30:55</small></span>
@@ -112,7 +112,7 @@
                     </div>
 
                     <div class="box-message-left">
-                        <div class="message-left">
+                        <div class="message-sent">
                             
                                 <p>Tutto fatto!</p>
                                 <span class="time"><small>10/01/2020 16:15:22</small></span>

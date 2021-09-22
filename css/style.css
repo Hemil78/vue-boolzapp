@@ -136,7 +136,7 @@ img{
     overflow-y: scroll;
 }
 
-.active{
+.box-contact li.active{
     background-color: #f0f1f1;
 }
 .contact{
@@ -186,8 +186,8 @@ img{
     justify-content: flex-end;
 }
 
-.message-left,
-.message-right{
+.message-sent,
+.message-received{
     position: relative;
     width: 45%;
     margin-top: 8px;
@@ -195,11 +195,11 @@ img{
     border-radius: 10px;
 }
 
-.message-left{
+.message-sent{
     background-color: #fff;
 }
 
-.message-right{
+.message-received{
     background-color: #d5f9ba;
 }
 
