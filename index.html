@@ -20,6 +20,9 @@
         
 
         <div id="root" class="container">
+
+
+
             <!-- COLUMN LEFT -->
             <div class="column-left">
 
@@ -55,20 +58,25 @@
 
                 <ul class="box-contact">
                     <!-- v-for per ciclare ogni contatto ed inserirlo dinamicamente e @ click per caricare i messaggi-->
-                    <li class="contact" v-for="(contact, index) in contacts" :key="index" :class="index == indexContact ? 'active' : null" @click="selectProfile(index)">
+                    <li class="contact" 
+                        v-for="(contact, index) in contacts" 
+                        :key="index" 
+                        :class="index == indexContact ? 'active' : null" 
+                        @click="selectProfile(index)">
                         <div class="contact-profile">
                             <!-- concateniamo il valore di ogni avatar con l'img statica -->
-                            <img :src=" `img/avatar${contact.avatar}.jpg` " :alt="contact.name">
+                            <img :src=" `img/avatar${contact.avatar}.jpg` " 
+                                :alt="contact.name">
                             <span><strong>{{contact.name}}</strong></span>
                         </div>
                     </li>
 
                 </ul>
                         
+            </div>
 
                 
 
-            </div>
             <!-- COLUMN RIGHT -->
             <div class="column-right">
 
@@ -76,7 +84,8 @@
 
                     <div class="box-contact-me">
                         <div class="call-icon">
-                            <img :src=" `img/avatar${contacts[indexContact].avatar}.jpg` " :alt="contacts[indexContact].name">
+                            <img :src=" `img/avatar${contacts[indexContact].avatar}.jpg` " 
+                                :alt="contacts[indexContact].name">
                         </div>
                         <div class="profile-text">
                             <span><strong>{{contacts[indexContact].name}}</strong></span>
@@ -93,7 +102,10 @@
 
                 <div class="main-message">
                     <!-- ciclo for per caricare dinamicamente i messaggi tramite l'index -->
-                    <div class="message" v-for="(message, index) in contacts[indexContact].messages" :class="message.status" :key="index">
+                    <div class="message" 
+                        v-for="(message, index) in contacts[indexContact].messages" 
+                        :class="message.status" 
+                        :key="index">
                         <div class="message-text">
                             
                                 <p>{{message.message}}</p>
@@ -102,10 +114,6 @@
                         </div>
                     </div>
 
-
-                    
-                    
-                    
                 </div>
 
                 <div class="footer-message">
@@ -116,14 +124,19 @@
 
             </div>
 
-        </div>
+            
 
-        
-        
-                        
+        </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="main/main.js"></script>
 
     </body>
 </html>
+                    
+                    
+                    
+
+        
+        
+                        
