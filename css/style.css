@@ -177,30 +177,22 @@ img{
     right: 3px;
 }
 
-.box-message-left,
-.box-message-right{
+.message{
     display: flex;
-    width: 100%;
-}
-.box-message-right{
-    justify-content: flex-end;
 }
 
-.message-sent,
-.message-received{
+.message-text{
     position: relative;
     width: 45%;
     margin-top: 8px;
     padding: 18px;
     border-radius: 10px;
-}
-
-.message-sent{
     background-color: #fff;
 }
 
-.message-received{
+.message.sent .message-text{
     background-color: #d5f9ba;
+    margin-left: auto;
 }
 
 .time{

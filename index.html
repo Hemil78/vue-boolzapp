@@ -25,8 +25,8 @@
 
                 <div class="nome-utente">
                     <span>
-                        <img src="img/avatar_io.jpg" alt="">
-                        <span><strong>Nome Utente</strong></span>
+                        <img src="img/avatar_8.jpg" alt="">
+                        <span><strong>Ponciarello</strong></span>
                     </span>
                     <span class="icons-font">
                         <i class="fas fa-circle-notch"></i>
@@ -54,8 +54,8 @@
                 </div>
 
                 <ul class="box-contact">
-                    <!-- v-for per ciclare ogni contatto ed inserirlo dinamicamente -->
-                    <li class="contact" v-for="(contact, index) in contacts" :key="index" :class="index == 0 ? 'active' : null">
+                    <!-- v-for per ciclare ogni contatto ed inserirlo dinamicamente e @ click per caricare i messaggi-->
+                    <li class="contact" v-for="(contact, index) in contacts" :key="index" :class="index == indexContact ? 'active' : null" @click="selectProfile(index)">
                         <div class="contact-profile">
                             <!-- concateniamo il valore di ogni avatar con l'img statica -->
                             <img :src=" `img/avatar${contact.avatar}.jpg` " :alt="contact.name">
@@ -76,10 +76,10 @@
 
                     <div class="box-contact-me">
                         <div class="call-icon">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src=" `img/avatar${contacts[indexContact].avatar}.jpg` " :alt="contacts[indexContact].name">
                         </div>
                         <div class="profile-text">
-                            <span><strong>Michele</strong></span>
+                            <span><strong>{{contacts[indexContact].name}}</strong></span>
                             <span class="access-time">Ultimo accesso oggi alle </span>
                         </div>
                     </div>
@@ -92,33 +92,17 @@
                 </div>
 
                 <div class="main-message">
-
-                    <div class="box-message-right">
-                        <div class="message-received">
+                    <!-- ciclo for per caricare dinamicamente i messaggi tramite l'index -->
+                    <div class="message" v-for="(message, index) in contacts[indexContact].messages" :class="message.status" :key="index">
+                        <div class="message-text">
                             
-                                <p>Hai portato a spasso il cane?</p>
-                                <span class="time"><small>10/01/2020 15:30:55</small></span>
-                            
-                        </div>
-                    </div>
-
-                    <div class="box-message-right">
-                        <div class="message-received">
-                            
-                                <p>Hai portato a spasso il cane?</p>
-                                <span class="time"><small>10/01/2020 15:30:55</small></span>
+                                <p>{{message.message}}</p>
+                                <span class="time"><small>{{message.date}}</small></span>
                             
                         </div>
                     </div>
 
-                    <div class="box-message-left">
-                        <div class="message-sent">
-                            
-                                <p>Tutto fatto!</p>
-                                <span class="time"><small>10/01/2020 16:15:22</small></span>
-                            
-                        </div>
-                    </div>
+
                     
                     
                     

@@ -3,19 +3,71 @@ const app = new Vue({
     data: {
         contacts: [
             {
+                name: 'Tony',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che è successo l\'altro giorno?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'No! Che è successo?',
+                        status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:51:01',
+                    message: 'La tipa che ho conosciuto al pub... te la ricordi?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:53:23',
+                        message: 'Si che mi ricordo zio...Che topa!!',
+                        status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:54:10',
+                    message: 'Mi ha scritto...',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:54:27',
+                        message: 'E...........',
+                        status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:55:08',
+                    message: 'Niente, mi ha detto che ha il tipo...',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:55:37',
+                        message: 'Ma vaff....Non te lo poteva dire subito???',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 15:56:01',
+                        message: 'Donne Hermano...Donne',
+                        status: 'sent'
+                        }
+                ],
+            },
+            {
                 name: 'Michele',
                 avatar: '_1',
                 visible: true,
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
-                        message: 'Hai portato a spasso il cane?',
-                        status: 'sent'
+                    date: '10/01/2020 15:30:55',
+                    message: 'Hai portato a spasso il cane?',
+                    status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
-                        message: 'Ricordati di dargli da mangiare',
-                        status: 'sent'
+                    date: '10/01/2020 15:50:00',
+                    message: 'Ricordati di dargli da mangiare',
+                    status: 'sent'
                     },
                     {
                         date: '10/01/2020 16:15:22',
@@ -52,14 +104,14 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                    date: '28/03/2020 10:10:40',
-                    message: 'La Marianna va in campagna',
-                    status: 'received'
+                        date: '28/03/2020 10:10:40',
+                        message: 'La Marianna va in campagna',
+                        status: 'received'
                     },
                     {
-                        date: '28/03/2020 10:20:10',
-                        message: 'Sicuro di non aver sbagliato chat?',
-                        status: 'sent'
+                    date: '28/03/2020 10:20:10',
+                    message: 'Sicuro di non aver sbagliato chat?',
+                    status: 'sent'
                     },
                     {
                         date: '28/03/2020 16:15:22',
@@ -69,7 +121,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Luisa',
+                name: 'Beppo',
                 avatar: '_4',
                 visible: true,
                 messages: [
@@ -80,24 +132,7 @@ const app = new Vue({
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
-                        status: 'received'
-                    }
-                ],
-            },
-            {
-                name: 'Tony',
-                avatar: '_5',
-                visible: true,
-                messages: [
-                    {
-                    date: '10/01/2020 15:30:55',
-                    message: 'Lo sai che ha aperto una nuova pizzeria?',
-                    status: 'sent'
-                    },
-                    {
-                        date: '10/01/2020 15:50:00',
-                        message: 'Si, ma preferirei andare al cinema',
+                        message: 'Si, bella zio!!! Allora stasera mi sfondo...',
                         status: 'received'
                     }
                 ],
@@ -137,8 +172,55 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Ugo',
-                avatar: '_8',
+                name: 'Serafino',
+                avatar: '_5',
+                visible: true,
+                messages: [
+                    {
+                    date: '10/01/2020 15:30:55',
+                    message: 'Lo sai che è successo l\'altro giorno?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        message: 'No! Che è successo?',
+                        status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:51:01',
+                    message: 'La tipa che ho conosciuto al pub... te la ricordi?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:53:23',
+                        message: 'Si che mi ricordo zio...Che topa!!',
+                        status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:54:10',
+                    message: 'Mi ha scritto...',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:54:27',
+                        message: 'E...........',
+                        status: 'received'
+                    },
+                    {
+                    date: '10/01/2020 15:55:08',
+                    message: 'Niente, mi ha detto che ha il tipo...',
+                    status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:55:37',
+                        message: 'Ma vaff....',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Gioia',
+                avatar: '_6',
                 visible: true,
                 messages: [
                     {
@@ -153,11 +235,36 @@ const app = new Vue({
                     }
                 ],
             },
-        ]
+            {
+                name: 'Ruggero',
+                avatar: '_3',
+                visible: true,
+                messages: [
+                    {
+                        date: '28/03/2020 10:10:40',
+                        message: 'La Marianna va in campagna',
+                        status: 'received'
+                    },
+                    {
+                    date: '28/03/2020 10:20:10',
+                    message: 'Sicuro di non aver sbagliato chat?',
+                    status: 'sent'
+                    },
+                    {
+                        date: '28/03/2020 16:15:22',
+                        message: 'Ah scusa!',
+                        status: 'received'
+                    }
+                ],
+            }
+        ],
+        indexContact: 0,
         
     },
     methods: {
-        
+        selectProfile(index) {
+            this.indexContact = index;
+        }
         
     }
     
