@@ -84,6 +84,7 @@
 
                     <div class="box-contact-me">
                         <div class="call-icon">
+                            <!-- inserisco dinamicamente le img avatar e il nome contenuti nell'oggetto array -->
                             <img :src=" `img/avatar${contacts[indexContact].avatar}.jpg` " 
                                 :alt="contacts[indexContact].name">
                         </div>
@@ -100,8 +101,8 @@
                     </span>
                 </div>
 
-                <div class="main-message">
-                    <!-- ciclo for per caricare dinamicamente i messaggi tramite l'index -->
+                <div class="main-message" id="scroll-down">
+                    <!-- ciclo for per caricare dinamicamente i messaggi e la data tramite l'index -->
                     <div class="message" 
                         v-for="(message, index) in contacts[indexContact].messages" 
                         :class="message.status" 
@@ -118,22 +119,27 @@
 
                 <div class="footer-message">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <!-- mi aggancio all'input con @keyup e gli assegno un valore -->
+                    <input type="text" placeholder="Scrivi un messaggio" 
+                        v-model="newMessage" 
+                        @keyup.enter="sendMessage()">
                     <i class="fas fa-microphone"></i>
                 </div>
 
             </div>
 
-            
+
 
         </div>
-
+        <!-- script day -->
+        <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+        <!-- script vue -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         <script src="main/main.js"></script>
 
     </body>
 </html>
-                    
+                   
                     
                     
 

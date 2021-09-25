@@ -61,7 +61,7 @@ const app = new Vue({
                 messages: [
                     {
                     date: '10/01/2020 15:30:55',
-                    message: 'Hai portato a spasso il cane?',
+                    message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos dolor aliquid saepe amet quibusdam nostrum incidunt ab provident enim a, perspiciatis aperiam voluptatem ducimus obcaecati reiciendis cumque ratione quae!',
                     status: 'sent'
                     },
                     {
@@ -71,7 +71,7 @@ const app = new Vue({
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        message: 'Tutto fatto!',
+                        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore eos dolor aliquid saepe amet quibusdam nostrum incidunt ab provident enim a, perspiciatis aperiam voluptatem ducimus obcaecati reiciendis cumque ratione quae!',
                         status: 'received'
                     }
                 ],
@@ -259,13 +259,38 @@ const app = new Vue({
             }
         ],
         indexContact: 0,
+        newMessage: ""
         
     },
     methods: {
         selectProfile(index) {
             this.indexContact = index;
-        }
+        },
+        sendMessage() {
+            
+            //vado a pushare il nuovo messaggio nel contatto corrente
+            this.contacts[this.indexContact].messages.push({
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                message: this.newMessage,
+                status: 'sent'
+            });
+            //resetto l'input
+            this.newMessage = "";
+            //creo una risposta automatica
+            //creo un'arrowfunction per il this che altrimenti sarebbe window
+            setTimeout(() => {
+                this.contacts[this.indexContact].messages.push({
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    message: 'ok',
+                    status: 'recived'
+                });
+            }, 2000);
         
+        }
+    },
+    // per scrollare ogni volta che va inserito un messaggio con l'id al div contenitore
+    updated() {
+        let objDiv = document.getElementById("scroll-down");
+        objDiv.scrollTop = objDiv.scrollHeight;
     }
-    
 });

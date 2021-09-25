@@ -13,7 +13,7 @@ body{
     background:  linear-gradient(to bottom, #009688 15%, #dcdbd1 15%);
 }
 
-/* CONTAINER */
+/* DEFAULT */
 
 img{
     width: 45px;
@@ -45,13 +45,16 @@ img{
 
 /* COLUMN LEFT */
 /* NOME UTENTE */
+
 .nome-utente,
 .contatto{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #eaeaea;
-    padding: 8px;
+    padding: 8px;;
+}
+.nome-utente{
     border-right: 1px solid #c5c4c4;
 }
 .icons-font i{
@@ -71,6 +74,7 @@ img{
 }
 
 /* NOTIFICHE */
+
 .notifiche{
     display: flex;
     padding: 
@@ -111,7 +115,7 @@ img{
 
 .search{
     padding: 5px;
-    background-color: #f0eeee;
+    background-color: #eaeaea;
 }
 .box-search{
     background-color: #fff;
@@ -127,6 +131,9 @@ img{
     margin-left: 20px;
     border: none;
 }
+.box-search input:focus{
+    outline: none;
+}
 
 /* CONTACT */
 
@@ -137,7 +144,7 @@ img{
 }
 
 .box-contact li.active{
-    background-color: #f0f1f1;
+    background-color: #eaeaea;
 }
 .contact{
     padding: 8px 10px;
@@ -151,6 +158,7 @@ img{
 }
 /* COLUMN RIGHT */
 /* LAST ACCESS */
+
 .box-contact-me{
     display: flex;
 }
@@ -163,6 +171,7 @@ img{
     font-size: 11px;
 }
 /* MAIN */
+
 .main-message{
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
@@ -193,11 +202,12 @@ img{
 .message.sent .message-text{
     background-color: #d5f9ba;
     margin-left: auto;
+    word-break: break-all;
 }
 
 .time{
     position: absolute;
-    color: #c8caca;
+    color: #b6b8b8;
 }
 
 /* write message */
@@ -207,7 +217,7 @@ img{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #f3eeea;
+    background-color: #eaeaea;
     padding: 5px 35px;
 }
 
@@ -222,8 +232,12 @@ img{
     border-radius: 8px;
     border: none;
 }
+.footer-message input:focus{
+    outline: none;
+}
 
-/* SCROOLBAR */
+/* SCROOLBAR BOX-CONTACT E MAIN */
+
 .box-contact::-webkit-scrollbar,
 .main-message::-webkit-scrollbar {
     width: 12px;               
@@ -231,7 +245,7 @@ img{
 
 .box-contact::-webkit-scrollbar-track,
 .main-message::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #eaeaea;
 
 }
 
