@@ -260,7 +260,12 @@ const app = new Vue({
         ],
         indexContact: 0,
         newMessage: "",
-        searchProfile: ""
+        searchProfile: "",
+        /* mi creo una proprietà all'esterno di contacts per gestire la visibilita del pop up info-message non avendo una proprietà all'interno */
+        infoMessage: {
+            visible: false,
+            index: null
+        }
         
         
     },
@@ -289,6 +294,7 @@ const app = new Vue({
             }, 2000);
         
         },
+        //metodo per filtrare i profili con la search al premere di ogni tasto
         filterProfile() {
             this.contacts.forEach((elm) => {
                 if(elm.name.toLowerCase().includes(this.searchProfile.toLowerCase())) {
@@ -297,13 +303,37 @@ const app = new Vue({
                     elm.visible = false;
                 }
             });
+        },
+        deleteSingleMessage(index) {
+            this.contacts[this.indexContact].messages.splice(index, 1);
+            this.resetMessage();
+        },
+        //al click il pop up appare e scompare
+        popUpInfo(index) {
+            if(index == this.infoMessage.index) {
+                this.resetMessage();
+            }else {
+                this.infoMessage.visible = true;
+                this.infoMessage.index = index;
+            }
+        },
+        //evito che cliccando su altri profili mi rimanga il pop up aperto
+        contactChange(index) {
+            this.indexContact = index;
+            this.resetMessage();
+        },
+        //creo un metodo da riutilizzare all'interno degli altri metodi per evitare ripetizione di codice
+        resetMessage() {
+            this.infoMessage.visible = false;
+            this.infoMessage.index = null;
         }
     },
     // per scrollare ogni volta che va inserito un messaggio con l'id al div contenitore
     updated() {
         let objDiv = document.getElementById("scroll-down");
         objDiv.scrollTop = objDiv.scrollHeight;
-    }
+    },
+    
     
     
 });
