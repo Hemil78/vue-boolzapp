@@ -52,7 +52,7 @@
                 <div class="search">
                     <div class="box-search">
                         <i class="fas fa-search"></i>
-                        <input type="search" placeholder="Cerca o inizia una nuova chat">
+                        <input type="search" placeholder="Cerca o inizia una nuova chat" v-model="searchProfile" @keyup="filterProfile()">
                     </div>
                 </div>
 
@@ -62,7 +62,8 @@
                         v-for="(contact, index) in contacts" 
                         :key="index" 
                         :class="index == indexContact ? 'active' : null" 
-                        @click="selectProfile(index)">
+                        @click="selectProfile(index)"
+                        v-if="contact.visible"> <!-- per gestire la visibilita dei profili nella search -->
                         <div class="contact-profile">
                             <!-- concateniamo il valore di ogni avatar con l'img statica -->
                             <img :src=" `img/avatar${contact.avatar}.jpg` " 

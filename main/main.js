@@ -259,7 +259,9 @@ const app = new Vue({
             }
         ],
         indexContact: 0,
-        newMessage: ""
+        newMessage: "",
+        searchProfile: ""
+        
         
     },
     methods: {
@@ -286,6 +288,15 @@ const app = new Vue({
                 });
             }, 2000);
         
+        },
+        filterProfile() {
+            this.contacts.forEach((elm) => {
+                if(elm.name.toLowerCase().includes(this.searchProfile.toLowerCase())) {
+                    elm.visible = true;
+                }else {
+                    elm.visible = false;
+                }
+            });
         }
     },
     // per scrollare ogni volta che va inserito un messaggio con l'id al div contenitore
@@ -293,4 +304,6 @@ const app = new Vue({
         let objDiv = document.getElementById("scroll-down");
         objDiv.scrollTop = objDiv.scrollHeight;
     }
+    
+    
 });
